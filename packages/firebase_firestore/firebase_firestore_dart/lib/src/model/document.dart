@@ -1,4 +1,6 @@
+import '../../generated/google/firestore/v1/document.pb.dart' as pb;
 import 'document_key.dart';
+import 'field_path.dart';
 import 'snapshot_version.dart';
 
 /// Represents a document in Firestore with a key, version, data and whether the data has local
@@ -34,7 +36,7 @@ abstract class Document {
   Map<String, Object> getData();
 
   /// Returns the data of the given path. Returns null if no data exists. */
-  Object? getField(FieldPath path);
+  pb.Value? getField(FieldPath path);
 
   /// Returns whether local mutations were applied via the mutation queue. */
   bool get hasLocalMutations;

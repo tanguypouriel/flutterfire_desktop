@@ -1,3 +1,5 @@
+import 'package:firebase_firestore_dart/src/core/filter.dart';
+import 'package:firebase_firestore_dart/src/core/order_by.dart';
 import 'package:firebase_firestore_dart/src/model/resource_path.dart';
 
 /// Encapsulates all the query attributes we support in the SDK.

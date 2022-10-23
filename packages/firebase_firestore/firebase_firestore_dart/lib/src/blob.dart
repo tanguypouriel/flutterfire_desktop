@@ -5,7 +5,7 @@ import 'dart:typed_data';
 /// Immutable class representing an array of bytes in Cloud Firestore.
 class Blob implements Comparable<Blob> {
 
-  final ByteData bytes;
+  final ByteString bytes;
 
   Blob(this.bytes);
 
