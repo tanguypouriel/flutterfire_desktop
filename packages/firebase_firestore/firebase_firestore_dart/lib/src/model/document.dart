@@ -1,3 +1,6 @@
+import 'package:firebase_firestore_dart/src/model/mutable_document.dart';
+import 'package:firebase_firestore_dart/src/model/object_value.dart';
+
 import '../../generated/google/firestore/v1/document.pb.dart' as pb;
 import 'document_key.dart';
 import 'field_path.dart';
@@ -33,7 +36,7 @@ abstract class Document {
   bool get isUnknownDocument;
 
   /// Returns the underlying data of this document. Returns an empty value if no data exists. */
-  Map<String, Object> getData();
+  ObjectValue get data;
 
   /// Returns the data of the given path. Returns null if no data exists. */
   pb.Value? getField(FieldPath path);
